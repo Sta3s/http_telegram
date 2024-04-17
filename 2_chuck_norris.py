@@ -8,3 +8,14 @@
 # 2. Izdrukā 3 nejaušus jokus no Chuck Norris par programmēšanu
 # 
 import requests
+
+for i in range(3):
+    r = requests.get('https://api.chucknorris.io/jokes/random')
+    R = r.json()
+    print("\n", R["value"])
+
+
+for i in range(3):
+    r = requests.get('https://api.chucknorris.io/jokes/random?category=dev')
+    R = r.json()
+    print("\n", R["value"])
